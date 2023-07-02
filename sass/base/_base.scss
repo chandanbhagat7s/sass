@@ -1,0 +1,23 @@
+*,
+*::after,
+*::before {
+    margin: 0;
+    padding: 0;
+    box-sizing: inherit;
+}
+
+/* we will conver all th unit into the rem okk  */
+
+html {
+    /* hardcoding it may create the problem okk */
+    /* font-size: 10px; */
+    font-size: 66.2%;
+}
+
+body {
+    font-family: 'Times New Roman', Times, serif;
+    /* font-size: 16px; */
+    line-height: 1.7;
+    padding: 3rem;
+    box-sizing: border-box;
+}

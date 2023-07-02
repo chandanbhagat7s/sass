@@ -1,0 +1,65 @@
+/* we are going to add button see how  */
+
+.btn {
+
+    &:link,
+    &:active {
+        text-decoration: none;
+        display: inline-block;
+        padding: 1.2rem;
+        background-color: $color-white;
+        border-radius: 7rem;
+
+
+    }
+
+    &:hover {
+        box-shadow: 0px 1rem 2rem $color-black;
+        transform: translateY(-0.3rem);
+
+
+        &::after {
+            transform: scale(1.5);
+            opacity: 0;
+            /* when it is comming out we are doing opacity 0 okk  */
+        }
+    }
+
+    &:active {
+        box-shadow: 0px 0.5rem 2rem $color-black;
+        transform: translateY(0.1rem);
+    }
+
+    &--white {
+        color: lighten($color: $color-black, $amount: 15);
+        position: relative;
+        margin-top: 3rem;
+        animation-name: moveup;
+        animation-duration: 3s;
+        font-size: 1.6rem;
+
+        &::after {
+            background-color: whit$color-white;
+        }
+    }
+
+    /* by using &::agfter  we are creating psudo element only for designing purpose 
+    content and display property are neccesary 
+*/
+
+
+    &::after {
+        content: "";
+        display: inline-block;
+        height: 100%;
+        width: 100%;
+        border-radius: 100px;
+        position: absolute;
+        top: 0;
+        left: 0;
+        z-index: -1;
+        transition: all 0.4s;
+
+
+    }
+}

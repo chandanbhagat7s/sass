@@ -18,46 +18,6 @@ body {
   padding: 3rem;
   box-sizing: border-box; }
 
-.header {
-  height: 95vh;
-  background-image: linear-gradient(to right bottom, rgba(126, 213, 111, 0.8), rgba(40, 180, 133, 0.8)), url("./img/hero.jpg");
-  background-position: top;
-  /* now we will use clip path */
-  clip-path: polygon(0 0, 100% 0, 100% 70%, 0 100%);
-  position: relative; }
-  .header__logo-box {
-    position: absolute;
-    top: 4rem;
-    left: 4rem; }
-  .header__logo {
-    height: 4rem; }
-  .header__text {
-    position: absolute;
-    /* this 40 and 50 % are relation with the parent  */
-    left: 50%;
-    top: 40%;
-    /* this is related with element  */
-    transform: translate(-50%, -50%); }
-
-.heading-primary {
-  color: #ffffff;
-  text-transform: uppercase;
-  text-align: center; }
-  .heading-primary--main {
-    display: block;
-    font-size: 6rem;
-    font-weight: 500;
-    letter-spacing: 3.5rem;
-    animation-name: moveInRight;
-    animation-duration: 2s; }
-  .heading-primary--sub {
-    display: block;
-    font-size: 2rem;
-    font-weight: 400;
-    letter-spacing: 1.7rem;
-    animation-name: moveInLeft;
-    animation-duration: 2s; }
-
 @keyframes moveInRight {
   0% {
     opacity: 0;
@@ -77,6 +37,35 @@ body {
   100% {
     opacity: 1;
     transform: translateX(0px); } }
+
+@keyframes moveup {
+  0% {
+    opacity: 0;
+    transform: translateY(5rem); }
+  80% {
+    transform: translateY(0.3rem); }
+  100% {
+    opacity: 1;
+    transform: translateY(0px); } }
+
+.heading-primary {
+  color: #ffffff;
+  text-transform: uppercase;
+  text-align: center; }
+  .heading-primary--main {
+    display: block;
+    font-size: 6rem;
+    font-weight: 500;
+    letter-spacing: 3.5rem;
+    animation-name: moveInRight;
+    animation-duration: 2s; }
+  .heading-primary--sub {
+    display: block;
+    font-size: 2rem;
+    font-weight: 400;
+    letter-spacing: 1.7rem;
+    animation-name: moveInLeft;
+    animation-duration: 2s; }
 
 /* we are going to add button see how  */
 .btn {
@@ -120,12 +109,23 @@ body {
     z-index: -1;
     transition: all 0.4s; }
 
-@keyframes moveup {
-  0% {
-    opacity: 0;
-    transform: translateY(5rem); }
-  80% {
-    transform: translateY(0.3rem); }
-  100% {
-    opacity: 1;
-    transform: translateY(0px); } }
+.header {
+  height: 95vh;
+  background-image: linear-gradient(to right bottom, rgba(126, 213, 111, 0.8), rgba(40, 180, 133, 0.8)), url("./img/hero.jpg");
+  background-position: top;
+  /* now we will use clip path */
+  clip-path: polygon(0 0, 100% 0, 100% 70%, 0 100%);
+  position: relative; }
+  .header__logo-box {
+    position: absolute;
+    top: 4rem;
+    left: 4rem; }
+  .header__logo {
+    height: 4rem; }
+  .header__text {
+    position: absolute;
+    /* this 40 and 50 % are relation with the parent  */
+    left: 50%;
+    top: 40%;
+    /* this is related with element  */
+    transform: translate(-50%, -50%); }
