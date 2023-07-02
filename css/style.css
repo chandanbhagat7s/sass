@@ -1,0 +1,131 @@
+*,
+*::after,
+*::before {
+  margin: 0;
+  padding: 0;
+  box-sizing: inherit; }
+
+/* we will conver all th unit into the rem okk  */
+html {
+  /* hardcoding it may create the problem okk */
+  /* font-size: 10px; */
+  font-size: 66.2%; }
+
+body {
+  font-family: 'Times New Roman', Times, serif;
+  /* font-size: 16px; */
+  line-height: 1.7;
+  padding: 3rem;
+  box-sizing: border-box; }
+
+.header {
+  height: 95vh;
+  background-image: linear-gradient(to right bottom, rgba(126, 213, 111, 0.8), rgba(40, 180, 133, 0.8)), url("./img/hero.jpg");
+  background-position: top;
+  /* now we will use clip path */
+  clip-path: polygon(0 0, 100% 0, 100% 70%, 0 100%);
+  position: relative; }
+  .header__logo-box {
+    position: absolute;
+    top: 4rem;
+    left: 4rem; }
+  .header__logo {
+    height: 4rem; }
+  .header__text {
+    position: absolute;
+    /* this 40 and 50 % are relation with the parent  */
+    left: 50%;
+    top: 40%;
+    /* this is related with element  */
+    transform: translate(-50%, -50%); }
+
+.heading-primary {
+  color: #ffffff;
+  text-transform: uppercase;
+  text-align: center; }
+  .heading-primary--main {
+    display: block;
+    font-size: 6rem;
+    font-weight: 500;
+    letter-spacing: 3.5rem;
+    animation-name: moveInRight;
+    animation-duration: 2s; }
+  .heading-primary--sub {
+    display: block;
+    font-size: 2rem;
+    font-weight: 400;
+    letter-spacing: 1.7rem;
+    animation-name: moveInLeft;
+    animation-duration: 2s; }
+
+@keyframes moveInRight {
+  0% {
+    opacity: 0;
+    transform: translateX(-10rem); }
+  80% {
+    transform: translateX(1rem); }
+  100% {
+    opacity: 1;
+    transform: translateX(0px); } }
+
+@keyframes moveInLeft {
+  0% {
+    opacity: 0;
+    transform: translateX(10rem); }
+  80% {
+    transform: translateX(-1rem); }
+  100% {
+    opacity: 1;
+    transform: translateX(0px); } }
+
+/* we are going to add button see how  */
+.btn {
+  /* by using &::agfter  we are creating psudo element only for designing purpose 
+    content and display property are neccesary 
+*/ }
+  .btn:link, .btn:active {
+    text-decoration: none;
+    display: inline-block;
+    padding: 1.2rem;
+    background-color: #ffffff;
+    border-radius: 7rem; }
+  .btn:hover {
+    box-shadow: 0px 1rem 2rem #000000;
+    transform: translateY(-0.3rem); }
+    .btn:hover::after {
+      transform: scale(1.5);
+      opacity: 0;
+      /* when it is comming out we are doing opacity 0 okk  */ }
+  .btn:active {
+    box-shadow: 0px 0.5rem 2rem #000000;
+    transform: translateY(0.1rem); }
+  .btn--white {
+    color: #262626;
+    position: relative;
+    margin-top: 3rem;
+    animation-name: moveup;
+    animation-duration: 3s;
+    font-size: 1.6rem; }
+    .btn--white::after {
+      background-color: whit #ffffff; }
+  .btn::after {
+    content: "";
+    display: inline-block;
+    height: 100%;
+    width: 100%;
+    border-radius: 100px;
+    position: absolute;
+    top: 0;
+    left: 0;
+    z-index: -1;
+    transition: all 0.4s; }
+
+@keyframes moveup {
+  0% {
+    opacity: 0;
+    transform: translateY(5rem); }
+  80% {
+    transform: translateY(0.3rem); }
+  100% {
+    opacity: 1;
+    transform: translateY(0px); } }
