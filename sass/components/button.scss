@@ -1,6 +1,8 @@
 /* we are going to add button see how  */
 
+
 .btn {
+    list-style: none;
 
     &:link,
     &:active {
@@ -39,7 +41,7 @@
         font-size: 1.6rem;
 
         &::after {
-            background-color: whit$color-white;
+            background-color: $color-white;
         }
     }
 
@@ -61,5 +63,34 @@
         transition: all 0.4s;
 
 
+    }
+}
+
+.btn-text {
+
+    &:link,
+    &:visited {
+        font-size: $default-font-size;
+        color: $color-primary;
+        display: inline-block;
+        text-decoration: none;
+        // applying hear border bottom as we can define thickness and have padding 
+        border-bottom: 1px solid $color-primary;
+        padding: 3px;
+        transition: all .2s;
+    }
+
+    &:hover {
+        background-color: $color-primary;
+        border-bottom: 1px solid white;
+        color: white;
+        box-shadow: 0 1rem 2rem rgba($color-black, 0.15);
+        transform: translateY(-2px);
+
+    }
+
+    &:active {
+        box-shadow: 0 1rem 2rem rgba($color-black, 0.15);
+        transform: translateY(0px);
     }
 }

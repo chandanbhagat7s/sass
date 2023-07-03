@@ -1,0 +1,74 @@
+.row {
+    // define width of row defining max-width: because if i is available then ok if not then it will be computed as 100% rest okk 
+    // for center block element 
+    max-width: $grid-width;
+    // background-color: lighten($color: $color-black, $amount: 70%);
+    margin: 0px auto;
+
+    &:not(:last-child) {
+        margin-bottom: $gutter-vertical;
+
+    }
+
+    @include clearfix;
+
+
+    // by class^='col-'  : will select all the class which starts with col-
+    // by class*='col-'  : will select all the class which contains with col-
+    // by class$='col-'  : will select all the class which ends with col-
+    [class^="col-"] {
+        float: left;
+
+
+
+        &:not(:last-child) {
+            margin-right: $gutter-horizontal;
+            float: left;
+        }
+    }
+
+    // now working with columns
+    .col-1-of-2 {
+        width: calc((100% - #{$gutter-horizontal})/2); // we deifne the width for one block 
+
+
+        // float: left;
+        // background-color: red;
+        // &:not(:last-child) {
+        //     margin-right: $gutter-horizontal;
+
+        // }
+    }
+
+    .col-1-of-3 {
+        width: calc((100% - 2*(#{$gutter-horizontal}))/3);
+
+        // background-color: red;
+        // this is being repeated so we willuse attrribute selector
+        // &:not(:last-child) {
+        //     margin-right: $gutter-horizontal;
+
+        // }
+    }
+
+    .col-2-of-3 {
+        width: calc(2*((100% - 2*(#{$gutter-horizontal}))/3) + #{$gutter-horizontal});
+
+    }
+
+    .col-1-of-4 {
+        width: calc((100% - 3*(#{$gutter-horizontal}))/4);
+
+    }
+
+    .col-2-of-4 {
+        width: calc(2*((100% - 3*(#{$gutter-horizontal}))/4) + #{$gutter-horizontal});
+
+    }
+
+    .col-3-of-4 {
+        width: calc(3*((100% - 3*(#{$gutter-horizontal}))/4) + 2* #{$gutter-horizontal});
+
+    }
+
+}
