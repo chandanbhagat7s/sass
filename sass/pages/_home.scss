@@ -22,3 +22,24 @@
     }
 
 }
+
+
+.section-tours {
+    background-color: lighten($color: $color-black, $amount: 95);
+    padding: 25rem 0rem;
+    padding-bottom: 5rem;
+
+    text-align: center;
+    margin-top: -10rem;
+
+}
+
+
+.story {
+    background-color: lighten($color: $color-black, $amount: 95);
+    padding: 2rem 0rem 5rem 0rem;
+
+    text-align: center;
+    // margin-top: -10rem;
+
+}
